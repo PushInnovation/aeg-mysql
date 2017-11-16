@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@push_innovation/aeg-common": "0.0.8",
-    "@push_innovation/aeg-xray": "^0.0.16",
+    "@push_innovation/aeg-xray": "^0.0.54",
     "@types/config": "0.0.32",
     "@types/lodash": "^4.14.70",
     "@types/mysql": "0.0.34",
