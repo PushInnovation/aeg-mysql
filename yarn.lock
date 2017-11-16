@@ -2,30 +2,20 @@
 # yarn lockfile v1
 
 
-"@adexchange/aeg-common@0.0.248":
-  version "0.0.248"
-  resolved "https://registry.yarnpkg.com/@adexchange/aeg-common/-/aeg-common-0.0.248.tgz#e237de958c4edb14afc1f91dc5e8cee623bc69a4"
+"@push_innovation/aeg-common@0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@push_innovation/aeg-common/-/aeg-common-0.0.8.tgz#475ce176a38646415505014634519ac98b26dc25"
   dependencies:
-    "@adexchange/aeg-logger" "0.0.126"
+    "@push_innovation/aeg-logger" "0.0.6"
     async "^2.1.5"
     babel-runtime "^6.23.0"
     bluebird "^3.4.7"
     lodash "^4.17.4"
     moment-timezone "^0.5.11"
 
-"@adexchange/aeg-logger@0.0.126":
-  version "0.0.126"
-  resolved "https://registry.yarnpkg.com/@adexchange/aeg-logger/-/aeg-logger-0.0.126.tgz#6772856e7e5f796258544ed72016f4680d5f6e42"
-  dependencies:
-    config "^1.25.1"
-    js-yaml "^3.8.1"
-    winston "^2.3.1"
-    winston-error "^1.0.1"
-    winston-papertrail "^1.0.4"
-
-"@adexchange/aeg-logger@0.0.145":
-  version "0.0.145"
-  resolved "https://registry.yarnpkg.com/@adexchange/aeg-logger/-/aeg-logger-0.0.145.tgz#032ed1a62f10efa704246c3e7ec4f0059aa9df8a"
+"@push_innovation/aeg-logger@0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@push_innovation/aeg-logger/-/aeg-logger-0.0.6.tgz#c420bbd9466cd0212eea23a39bf0bab1b34a4140"
   dependencies:
     "@types/config" "0.0.32"
     "@types/winston" "^2.3.3"
@@ -35,15 +25,16 @@
     winston-error "^1.0.1"
     winston-papertrail "^1.0.4"
 
-"@adexchange/aeg-xray@0.0.53":
-  version "0.0.53"
-  resolved "https://registry.yarnpkg.com/@adexchange/aeg-xray/-/aeg-xray-0.0.53.tgz#db0a74981180b7a30aeaaad0afe026508ab6c9ff"
+"@push_innovation/aeg-xray@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@push_innovation/aeg-xray/-/aeg-xray-0.0.16.tgz#b37a478f6af3a6996dd11d4e31f9aa3622d4ab8b"
   dependencies:
-    "@adexchange/aeg-logger" "0.0.145"
+    "@push_innovation/aeg-logger" "0.0.6"
     "@types/express" "^4.0.36"
     "@types/lodash" "^4.14.70"
     "@types/request" "^2.0.1"
     "@types/request-promise" "^4.1.36"
+    continuation-local-storage "^3.2.0"
     ip "^1.1.5"
     lodash "^4.17.4"
     stacktrace-js "^2.0.0"
@@ -244,6 +235,13 @@ assert-plus@^0.2.0:
 async-each@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
+
+async-listener@^0.6.0:
+  version "0.6.8"
+  resolved "https://registry.yarnpkg.com/async-listener/-/async-listener-0.6.8.tgz#d3556ef905d5ad77b52e52b37d68b1d8a02481f5"
+  dependencies:
+    semver "^5.3.0"
+    shimmer "^1.1.0"
 
 async@^1.4.0:
   version "1.5.2"
@@ -536,6 +534,13 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
 
+continuation-local-storage@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/continuation-local-storage/-/continuation-local-storage-3.2.0.tgz#e19fc36b597090a5d4e4a3b2ea3ebc5e29694a24"
+  dependencies:
+    async-listener "^0.6.0"
+    emitter-listener "^1.0.1"
+
 convert-source-map@^1.3.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.0.tgz#9acd70851c6d5dfdd93d9282e5edf94a03ff46b5"
@@ -650,6 +655,12 @@ ecc-jsbn@~0.1.1:
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
   dependencies:
     jsbn "~0.1.0"
+
+emitter-listener@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/emitter-listener/-/emitter-listener-1.0.1.tgz#b2499ea6e58230a52c268d5df261eecd9f10fe97"
+  dependencies:
+    shimmer "1.0.0"
 
 error-ex@^1.2.0:
   version "1.3.1"
@@ -1882,6 +1893,14 @@ shebang-command@^1.2.0:
 shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
+
+shimmer@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/shimmer/-/shimmer-1.0.0.tgz#49c2d71c678360b802be18b278382d1cbb805c39"
+
+shimmer@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/shimmer/-/shimmer-1.1.0.tgz#97d7377137ffbbab425522e429fe0aa89a488b35"
 
 should-equal@^1.0.0:
   version "1.0.1"
